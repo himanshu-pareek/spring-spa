@@ -17,3 +17,33 @@ We want to address the following requirements:
 5. Accessing backend resources from SPA ✅
 6. Configuring CSRF for SPAs ✅
 7. Enabling rapid development in watch mode ✅
+
+## Building the App
+
+Create a `jar` file using the following command:
+
+```shell
+./gradlew bootJar
+```
+
+This will generate a fat jar in `build/libs` directory. Run the `jar` file using the following command:
+
+```shell
+java -jar /path/to/file.jar
+```
+
+This will start the application on port `8080`. You can configure port and other things, since it is a normal spring boot application.
+
+## Development Mode
+
+While developing, you may want to build the web apps in watch mode, so that you don't need to restart the spring app after each file change. In separate terminals, run the following `2` commands (for `2` apps) to build them in watch mode:
+
+```shell
+./gradlew :app1:watchWebapp
+
+./gradlew :app2:watchWebapp
+```
+
+Then start the spring boot application with `local` active profile. This will make spring load the configurations from `src/main/resources/application-loca.properties` file, which disables the cache for spring assets and thymeleaf (so that you don't need to restart the spring application for the web app changes to take affect).
+
+
