@@ -1,0 +1,4 @@
+#!/bin/sh
+cd $(dirname $0)
+PATH="$PWD/.gradle/nodejs/node-v24.12.0-linux-x64/bin":$PATH
+npm "$@"
