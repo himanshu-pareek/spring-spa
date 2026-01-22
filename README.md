@@ -46,4 +46,22 @@ While developing, you may want to build the web apps in watch mode, so that you 
 
 Then start the spring boot application with `local` active profile. This will make spring load the configurations from `src/main/resources/application-loca.properties` file, which disables the cache for spring assets and thymeleaf (so that you don't need to restart the spring application for the web app changes to take affect).
 
+## Creating Docker Image
 
+In order to create docker image of the project, run the following command:
+
+```shell
+./gradlew bootBuildImage
+```
+
+In order to run the app in docker (from the image created using the above command), run the following command:
+
+```shell
+docker run --expose 8080 --publish 8080:8080 <image-name>
+```
+
+NOTE: You can see the available images in your system using the following command:
+
+```shell
+docker image ls # docker images or docker image list
+```
