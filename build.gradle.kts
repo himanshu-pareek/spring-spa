@@ -45,3 +45,11 @@ subprojects {
 		}
 	}
 }
+
+/*
+app1 -> task (buildWebApp) -> app1/build/webapp
+app2 -> task (buildWebApp) -> app2/dist
+
+app1/build/webapp -> build/resources/main/templates/app1
+app2/dist -> build/resources/main/templates/app2
+ */

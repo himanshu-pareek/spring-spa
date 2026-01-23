@@ -65,3 +65,13 @@ NOTE: You can see the available images in your system using the following comman
 ```shell
 docker image ls # docker images or docker image list
 ```
+
+## References
+
+- [Securing Single Page Applications with Spring Security 🔐](https://www.youtube.com/playlist?list=PLbk-lC-jmHejQqn3ZzH7fuczWJiddjFuz)
+- [Multifactor Authentication (MFA) in Spring Security 7](https://youtu.be/9srwcQxvUCw?si=VJwOLaqqsZKOBn82)
+- [gradle-node-plugin](https://github.com/node-gradle/gradle-node-plugin)
+- [Tutorial: Tic-Tac-Toe - React](https://react.dev/learn/tutorial-tic-tac-toe)
+- [Quick Start | Vue.js](https://vuejs.org/guide/quick-start.html)
+- [Command Line Interface | Vite](https://vite.dev/guide/cli)
+- [npm-watch](https://github.com/M-Zuber/npm-watch)

@@ -32,7 +32,7 @@ node {
 val buildWebapp = tasks.register<NpmTask>("buildWebapp") {
     dependsOn("npmInstall")
     environment.put("BUILD_PATH", layout.buildDirectory.dir("webapp").get().asFile.absolutePath)
-    args.assign(listOf("run", "build"))
+    args.assign(listOf("run", "build")) // npm run build
     inputs.files("package.json", "package-lock.json")
     inputs.dir("src")
     inputs.dir(fileTree("node_modules").exclude(".cache"))
