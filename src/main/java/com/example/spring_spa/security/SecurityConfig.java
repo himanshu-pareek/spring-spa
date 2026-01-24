@@ -29,9 +29,10 @@ public class SecurityConfig {
     http.authorizeHttpRequests(
         authz ->
             authz
-                .requestMatchers("/app2/**").access(mfa.authenticated())
+                .requestMatchers("/app2/**").access(mfa.hasAuthority("ROLE_ADMIN"))
                 .anyRequest().authenticated()
     );
+
 
     http.formLogin(Customizer.withDefaults());
     http.oneTimeTokenLogin(Customizer.withDefaults());
